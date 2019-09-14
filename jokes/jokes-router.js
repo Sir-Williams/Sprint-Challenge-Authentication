@@ -2,13 +2,15 @@ const axios = require('axios');
 
 const router = require('express').Router();
 
+const auth = require('../auth/authenticate-middleware.js')
+
 router.get('/', (req, res) => {
   const requestOptions = {
     headers: { accept: 'application/json' },
   };
 
   axios
-    .get('https://icanhazdadjoke.com/search', requestOptions)
+    .get('https://icanhazdadjoke.com/search', requestOptions, auth)
     .then(response => {
       res.status(200).json(response.data.results);
     })
