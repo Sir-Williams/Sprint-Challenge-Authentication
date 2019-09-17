@@ -1,0 +1,8 @@
+1.  the purpose of sessions is so that people can keep looking at information, even after they close it and re-open it. Or if 
+    it contains sensitive information, it can close all sessions so people can get on your computer and see it.
+
+2.  bcrypt helps hash passwords so that they cant be translated 
+
+3.  it adds little bits to the end of passwords to make it more unique
+
+4.  parts of a JSON web token are the header, payload, and signature

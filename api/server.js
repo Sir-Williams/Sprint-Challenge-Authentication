@@ -39,5 +39,10 @@ server.use(session(sessionConfig))
 
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
+server.use('/api/users', authenticate);
+
+server.get("/", (req, res) => {
+    res.json({ message: "This is a site." });
+  });
 
 module.exports = server;
